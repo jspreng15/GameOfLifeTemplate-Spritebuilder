@@ -8,6 +8,7 @@
 
 #import "Grid.h"
 #import "Creature.h"
+#import "Creature.m"
 
 // these are variables that cannot be changed
 static const int GRID_ROWS = 8;
@@ -178,17 +179,24 @@ for (int i = 0; i < [_gridArray count]; i++)
         //iterates through all of the rows in each column
         for (int j = 0; j < [_gridArray[i] count]; j++)
         {
+            
+            // access the creature in the cell that corresponds to the current row/column
+            Creature *currentCreature = _gridArray[i][j];
+            
+            // remember that every creature has a 'livingNeighbors' property that we created earlier
+            currentCreature.livingNeighbors = 0;
+
+            
             //checks if there are 3 neighbors. if there are, the cell is left alive or made alive
             if (currentCreature.livingNeighbors == 3)
             {
-                Creature.isAlive = YES;
+                currentCreature.isAlive = YES;
             }
-            else if (Creature.livingNeighbors <= 1 || Creature.livingNeighbors > 4)
+            else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors > 4)
             {
-                Creature.isAlive = NO;
+                currentCreature.isAlive = NO;
             }
         }
     }
-            
 }
 @end
