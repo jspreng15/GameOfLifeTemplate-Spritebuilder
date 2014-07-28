@@ -184,7 +184,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             Creature *currentCreature = _gridArray[i][j];
             
             // remember that every creature has a 'livingNeighbors' property that we created earlier
-            currentCreature.livingNeighbors = 0;
+            //currentCreature.livingNeighbors = 0;
 
             
             //checks if there are 3 neighbors. if there are, the cell is left alive or made alive
