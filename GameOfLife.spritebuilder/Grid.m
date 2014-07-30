@@ -195,7 +195,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             if (currentCreature.livingNeighbors == 3)
             {
                 currentCreature.isAlive = YES;
-                numAlive ++;
+               // numAlive ++;
             }
             else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors > 4)
             {
