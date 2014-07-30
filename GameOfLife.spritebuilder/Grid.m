@@ -14,6 +14,7 @@
 static const int GRID_ROWS = 8;
 static const int GRID_COLUMNS = 10;
 
+
 @implementation Grid {
     NSMutableArray *_gridArray;
     float _cellWidth;
@@ -173,6 +174,9 @@ for (int i = 0; i < [_gridArray count]; i++)
 
 -(void) updateCreatures
 {
+    
+    int numAlive = 0;
+    
     //Counts number of elements in the array
     for (int i= 0; i < [_gridArray count]; i++)
     {
@@ -191,6 +195,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             if (currentCreature.livingNeighbors == 3)
             {
                 currentCreature.isAlive = YES;
+                numAlive ++;
             }
             else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors > 4)
             {
@@ -198,5 +203,6 @@ for (int i = 0; i < [_gridArray count]; i++)
             }
         }
     }
+    _totalAlive = numAlive;
 }
 @end
