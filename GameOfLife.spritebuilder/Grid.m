@@ -201,6 +201,11 @@ for (int i = 0; i < [_gridArray count]; i++)
             {
                 currentCreature.isAlive = NO;
             }
+            if ((currentCreature.isAlive = YES))
+            {
+                
+                numAlive++;
+            }
         }
     }
     _totalAlive = numAlive;
