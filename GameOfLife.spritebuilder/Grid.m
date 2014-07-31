@@ -196,7 +196,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             //checks if there are 3 neighbors. if there are, the cell is left alive or made alive
             
             
-            if ((currentCreature.isAlive = YES))
+            if (currentCreature.isAlive = YES)
             {
                 numAlive ++;
             }
