@@ -175,7 +175,8 @@ for (int i = 0; i < [_gridArray count]; i++)
 -(void) updateCreatures
 {
     
-    int numAlive = 0;
+    int numAlive;
+    numAlive = 0;
     
     //Counts number of elements in the array
     for (int i= 0; i < [_gridArray count]; i++)
@@ -200,6 +201,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors > 4)
             {
                 currentCreature.isAlive = NO;
+                numAlive --;
             }
            
         }
