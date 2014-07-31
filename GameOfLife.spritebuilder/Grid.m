@@ -162,6 +162,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                         if (neighbor.isAlive)
                         {
                         currentCreature.livingNeighbors += 1;
+                        
                         }
                     }
                 }
@@ -193,18 +194,24 @@ for (int i = 0; i < [_gridArray count]; i++)
 
             
             //checks if there are 3 neighbors. if there are, the cell is left alive or made alive
+            
+            
+            if ((currentCreature.isAlive = YES))
+            {
+                numAlive ++;
+            }
+            
             if (currentCreature.livingNeighbors == 3)
             {
                 currentCreature.isAlive = YES;
-                numAlive ++;
+                
             }
             else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors > 4)
             {
                 currentCreature.isAlive = NO;
-                numAlive --;
+                
             }
-           
-        }
+                   }
     }
     _totalAlive = numAlive;
 }
