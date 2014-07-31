@@ -185,7 +185,7 @@ for (int i = 0; i < [_gridArray count]; i++)
         //iterates through all of the rows in each column
         for (int j = 0; j < [_gridArray[i] count]; j++)
         {
-            
+            numAlive ++;
             // access the creature in the cell that corresponds to the current row/column
             Creature *currentCreature = _gridArray[i][j];
             
@@ -194,12 +194,6 @@ for (int i = 0; i < [_gridArray count]; i++)
 
             
             //checks if there are 3 neighbors. if there are, the cell is left alive or made alive
-            
-            
-            if (currentCreature.isAlive = YES)
-            {
-                numAlive ++;
-            }
             
             if (currentCreature.livingNeighbors == 3)
             {
