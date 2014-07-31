@@ -176,22 +176,25 @@ for (int i = 0; i < [_gridArray count]; i++)
 -(void) updateCreatures
 {
     
+    // access the creature in the cell that corresponds to the current row/column
+    Creature *currentCreature = _gridArray[i][j];
+    
     int numAlive;
     numAlive = 0;
-    
+    if ((currentCreature.isAlive = YES))
+    {
+        numAlive++;
+    }
     //Counts number of elements in the array
     for (int i= 0; i < [_gridArray count]; i++)
     {
         //iterates through all of the rows in each column
         for (int j = 0; j < [_gridArray[i] count]; j++)
         {
-            numAlive ++;
+            
+           
             // access the creature in the cell that corresponds to the current row/column
             Creature *currentCreature = _gridArray[i][j];
-            
-            // remember that every creature has a 'livingNeighbors' property that we created earlier
-            //currentCreature.livingNeighbors = 0;
-
             
             //checks if there are 3 neighbors. if there are, the cell is left alive or made alive
             
