@@ -176,15 +176,11 @@ for (int i = 0; i < [_gridArray count]; i++)
 -(void) updateCreatures
 {
     
-    // access the creature in the cell that corresponds to the current row/column
-    Creature *currentCreature = _gridArray[i][j];
+    
     
     int numAlive;
     numAlive = 0;
-    if ((currentCreature.isAlive = YES))
-    {
-        numAlive++;
-    }
+   
     //Counts number of elements in the array
     for (int i= 0; i < [_gridArray count]; i++)
     {
@@ -208,7 +204,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 currentCreature.isAlive = NO;
                 
             }
-                   }
+        }
     }
     _totalAlive = numAlive;
 }
